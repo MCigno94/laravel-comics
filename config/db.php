@@ -213,6 +213,28 @@ return [
                 'Joëlle Jones'
             ],
         ],
+    ],
+    'itemBanner' => [        
+        [
+            'title' => 'Digital Comics',
+            'src' => 'img/buy-comics-digital-comics.png',
+        ],
+        [
+            'title' => 'DC Merchandise',
+            'src' => 'img/buy-comics-merchandise.png',
+        ],
+        [
+            'title' => 'Subscription',
+            'src' => 'img/buy-comics-shop-locator.png',
+        ],
+        [
+            'title' => 'Comic Shop Locator',
+            'src' => 'img/buy-comics-subscriptions.png',
+        ],
+        [
+            'title' => 'DC Pover Visa',
+            'src' => 'img/buy-dc-power-visa.svg',
+        ],
     ]
 ];
 

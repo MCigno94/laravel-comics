@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
     $cards = config('db.cards');
-    //dd($cards);    
-    return view('comics', ['cards' => $cards]);
+    //dd($cards);
+    $itemBanner = config('db.itemBanner');
+    //dd($itemBanner);    
+    return view('comics', ['cards' => $cards], ['itemBanner' => $itemBanner]);
 })->name('comics');

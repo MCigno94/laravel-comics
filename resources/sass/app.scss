@@ -23,6 +23,16 @@ header {
 }
 
 main {
+    .jumbotrone {
+        img {
+            max-width: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            height: 530px;
+            display: block;
+        }
+    }
     .banner {
         z-index: 10;
         .container {
