@@ -1,1 +1,78 @@
 //
+@use 'bootstrap';
+header {
+    nav {
+        .logo_brand {
+            img {
+                width: 70px;
+            }
+        }
+        a {
+            height: 100%;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            &.active:first-child {
+                border-bottom: 3px solid blue;
+            }
+            &:hover {
+                background-color: rgb(167, 184, 240);
+            }
+        }
+    }
+}
+
+main {
+    .banner {
+        z-index: 10;
+        .container {
+            .row {
+                padding: 3rem 1.5rem;
+                .image {
+                    height: 50px;
+                }
+                .description {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .footer_top {
+        background-image: url('@/assets/img/footer-bg.jpg');
+        .container {
+            .row {
+                .col-4 {
+                    padding-top: 2rem;
+                }
+            }
+            .logo_dc {
+                background-image: url('@/assets/img/dc-logo-bg.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            h3 {
+                font-size: 14px;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+            ul {
+                padding: 0;
+                list-style: none;
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .footer_bottom {
+        .icon_social {
+            img {
+                padding: 0 0.25rem;
+            }
+        }
+    }
+}
