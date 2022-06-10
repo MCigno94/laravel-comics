@@ -1,17 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="cards">
-
+<section class="cards bg-dark">
     <div class="container">
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-            @forelse($cards as $card)
+        <div class="current_series text-uppercase text-white bg-primary p-2 position-absolute">
+            current series
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6">
+            @forelse($cards as $index => $card)
             <div class="col">
-                <div class="card">
-                    <img class="img-fluid" src="{{$card['thumb']}}" alt="">
-                    <h5 class="pb-2">{{$card['title']}}</h5>
-                </div>
+                <a class="text-decoration-none" href="{{route('comics.show', $index)}}">
+                    <div class="card bg-transparent text-white">
+                        <img class="img-fluid" src="{{$card['thumb']}}" alt="">
+                        <h5 class="pb-2">{{$card['title']}}</h5>
+                    </div>
+                </a>
             </div>
             
             @empty
@@ -22,7 +27,6 @@
             @endforelse
         </div>
     </div>
-    
 </section>
 
 <section class="banner bg-primary">

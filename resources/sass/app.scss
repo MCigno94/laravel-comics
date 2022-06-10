@@ -7,14 +7,14 @@ header {
                 width: 70px;
             }
         }
+        .active {
+            border-bottom: 3px solid blue;
+        }
         a {
             height: 100%;
             color: #333;
             font-size: 14px;
             font-weight: 600;
-            &.active:first-child {
-                border-bottom: 3px solid blue;
-            }
             &:hover {
                 background-color: rgb(167, 184, 240);
             }
@@ -33,17 +33,41 @@ main {
             display: block;
         }
     }
-    .banner {
-        z-index: 10;
+    .cards {
         .container {
+            padding: 2rem 0;
+            position: relative;
+            .current_series {
+                font-weight: bold;
+                border-radius: 5px;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                transform: translate(0, -50%);
+            }
             .row {
-                padding: 3rem 1.5rem;
-                .image {
-                    height: 50px;
+                padding: 0 1rem;
+                img {
+                    max-width: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    object-position: top;
                 }
-                .description {
-                    font-size: 14px;
-                }
+            }
+        }
+    }
+}
+
+.banner {
+    z-index: 10;
+    .container {
+        .row {
+            padding: 3rem 1.5rem;
+            .image {
+                height: 50px;
+            }
+            .description {
+                font-size: 14px;
             }
         }
     }
@@ -51,7 +75,7 @@ main {
 
 footer {
     .footer_top {
-        background-image: url('@/assets/img/footer-bg.jpg');
+        background-image: url('../img/footer-bg.jpg');
         .container {
             .row {
                 .col-4 {
@@ -59,7 +83,7 @@ footer {
                 }
             }
             .logo_dc {
-                background-image: url('@/assets/img/dc-logo-bg.png');
+                background-image: url('../img/dc-logo-bg.png');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
